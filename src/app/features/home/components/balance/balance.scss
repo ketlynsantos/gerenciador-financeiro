@@ -1,0 +1,8 @@
+:host {
+    display: flex;
+    gap: 16px;
+
+    .card {
+        flex: 1;
+    }
+}
