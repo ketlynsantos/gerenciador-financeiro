@@ -1,18 +1,6 @@
 {
   "transactions": [
     {
-      "title": "Salário",
-      "value": 100.5,
-      "type": "income",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "title": "VA",
-      "value": 50,
-      "type": "income"
-    },
-    {
       "id": 3,
       "title": "Aluguel",
       "value": 150,

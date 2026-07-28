@@ -23,4 +23,8 @@ export class TransactionsService {
   put(id: number, payload: TransactionPayload) {
     return this.httpClient.put<Transaction>(`http://localhost:3000/transactions/${id}`, payload)
   }
+
+  delete(id: number) {
+    return this.httpClient.delete<Transaction>(`http://localhost:3000/transactions/${id}`)
+  }
 }
