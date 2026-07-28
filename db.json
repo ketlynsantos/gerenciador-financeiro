@@ -1,10 +1,10 @@
 {
   "transactions": [
     {
-      "id": 1,
       "title": "Salário",
-      "value": 100,
-      "type": "income"
+      "value": 100.5,
+      "type": "income",
+      "id": 1
     },
     {
       "id": 2,
@@ -35,6 +35,12 @@
       "value": 0.1,
       "type": "income",
       "id": 6
+    },
+    {
+      "title": "NJovo",
+      "value": 100,
+      "type": "outcome",
+      "id": 7
     }
   ]
 }
