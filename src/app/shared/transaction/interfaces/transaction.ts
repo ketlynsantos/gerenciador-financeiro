@@ -6,3 +6,6 @@ export interface Transaction {
     value: number
     type: TransactionType
 }
+
+// Omitir o id
+export type TransactionPayload = Omit<Transaction, 'id'>
