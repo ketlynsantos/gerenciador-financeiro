@@ -23,6 +23,10 @@
     }
   </mat-form-field>
 
+  @if (form.hasError('wrongCredentials')) {
+    <mat-error>Usuário ou senha está icorreto.</mat-error>
+  }
+
   <div class="login__submit">
     <button type="submit" mat-flat-button="filled" [disabled]="form.invalid">Entrar</button>
   </div>
