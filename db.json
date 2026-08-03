@@ -1,24 +1,6 @@
 {
   "transactions": [
     {
-      "id": 3,
-      "title": "Aluguel",
-      "value": 150,
-      "type": "outcome"
-    },
-    {
-      "title": "Sálario",
-      "value": 2500,
-      "type": "income",
-      "id": 4
-    },
-    {
-      "title": "Mercado - Compra do Mês",
-      "value": 500,
-      "type": "outcome",
-      "id": 5
-    },
-    {
       "title": "Teste",
       "value": 0.1,
       "type": "income",
