@@ -4,7 +4,7 @@ import { getTransactionByIdResolver } from "./pages/create-or-edit/resolvers/get
 import { ListComponent } from "./pages/list/list.component";
 import { getTransactionsResolver } from "./pages/list/resolvers/get-transactions-resolver";
 
-export const routes: Routes = [
+export default [
     {
         path: '',
         component: ListComponent,
@@ -19,4 +19,4 @@ export const routes: Routes = [
         component: CreateOrEditComponent,
         resolve: { transaction: getTransactionByIdResolver }
     }
-]
+] as Routes
