@@ -8,7 +8,7 @@ import {
   MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog'
-import { DialogData } from '../../interfaces/dialog-data'
+import { DialogData } from '@shared/dialog/confirmation/interfaces/dialog-data'
 
 @Component({
   selector: 'app-confirmation-dialog',
