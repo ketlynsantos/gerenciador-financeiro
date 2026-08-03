@@ -1,0 +1,20 @@
+<app-balance [transactions]="transactions()"></app-balance>
+
+<div class="list__actions">
+  <a matButton="filled" routerLink="create">Adicionar Transação</a>
+</div>
+
+<app-transactions-container class="list__transactions" [transactions]="transactions()">
+  <ng-template #item let-item="item">
+    <app-transaction-item
+      class="list__transaction"
+      [transaction]="item"
+      (edit)="edit($event)"
+      (remove)="remove($event)"
+    ></app-transaction-item>
+  </ng-template>
+
+  <ng-template #noItems>
+    <app-no-transactions></app-no-transactions>
+  </ng-template>
+</app-transactions-container>
