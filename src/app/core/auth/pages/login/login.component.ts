@@ -6,6 +6,7 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { UserCredentials } from '../../interfaces/user-credentials';
+import { AuthTokenStorageService } from '../../services/auth-token-storage.service';
 
 @Component({
     selector: 'app-login',
@@ -16,6 +17,7 @@ import { UserCredentials } from '../../interfaces/user-credentials';
 export class LoginComponent {
   private authService = inject(AuthService)
   private router = inject(Router)
+  private authTokenStorageService = inject(AuthTokenStorageService)
 
   form = new FormGroup({
     user: new FormControl('', { validators: [Validators.required] }),
@@ -31,7 +33,8 @@ export class LoginComponent {
     }
 
     this.authService.login(payload).subscribe({
-      next: () => {
+      next: (response) => {
+        this.authTokenStorageService.set(response.token)
         this.router.navigate([''])
       },
       error: (response: HttpErrorResponse) => {
