@@ -1,11 +1,11 @@
 <header class="header">
-    <mat-toolbar class="header__toolbar">
-        <div class="header__toolbar-content">
-            <span>Gerenciador Financeiro</span>
+  <mat-toolbar class="header__toolbar">
+    <div class="header__toolbar-content">
+      <span>Gerenciador Financeiro</span>
 
-            @if (true) {
-                <button matButton="filled" class="header__toolbar-logout">Sair</button>
-            }
-        </div>
-    </mat-toolbar>
+      @if (true) {
+        <button matButton="filled" class="header__toolbar-logout" (click)="logout()">Sair</button>
+      }
+    </div>
+  </mat-toolbar>
 </header>

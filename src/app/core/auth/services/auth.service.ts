@@ -34,4 +34,8 @@ export class AuthService {
   refreshToken(token: string) {
     return of({ token: generateToken() })
   }
+
+  logout() {
+    return of({})
+  }
 }

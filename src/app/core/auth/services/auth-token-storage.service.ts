@@ -20,4 +20,8 @@ export class AuthTokenStorageService {
   set(token: string) {
     this.localStorageToken.setItem(this.key, token)
   }
+
+  remove(): void {
+    return this.localStorageToken.removeItem(this.key)
+  }
 }
