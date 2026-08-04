@@ -30,4 +30,8 @@ export class AuthService {
   getCurrentUser(token: string): Observable<User> {
     return of({ username: 'admin' })
   }
+
+  refreshToken(token: string) {
+    return of({ token: generateToken() })
+  }
 }

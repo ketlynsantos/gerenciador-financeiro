@@ -9,6 +9,14 @@ export class AuthTokenStorageService {
 
   private localStorageToken = inject(LocalStorageToken)
   
+  get(): string | null {
+    return this.localStorageToken.getItem(this.key)
+  }
+
+  has(): boolean {
+    return Boolean(this.get())
+  }
+
   set(token: string) {
     this.localStorageToken.setItem(this.key, token)
   }
