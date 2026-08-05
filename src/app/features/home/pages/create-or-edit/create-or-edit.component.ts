@@ -8,13 +8,14 @@ import { NgxMaskDirective } from 'ngx-mask';
 import { TransactionType } from '@shared/transaction/enums/transaction-type';
 import { TransactionsService } from '@shared/transaction/services/transactions.service';
 import { Transaction, TransactionPayload } from '@shared/transaction/interfaces/transaction';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { FeedbackService } from '@shared/feedback/services/feedback.service';
 import { tap } from 'rxjs';
+import { FullWidthDirective } from '@shared/material/form-field/directives/full-width.directive';
 
 @Component({
   selector: 'app-create-or-edit',
-  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatAnchor, MatButtonModule, MatButtonToggleModule, NgxMaskDirective],
+  imports: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, MatAnchor, MatButtonModule, MatButtonToggleModule, NgxMaskDirective, FullWidthDirective],
   templateUrl: './create-or-edit.component.html',
   styleUrl: './create-or-edit.component.scss',
 })
